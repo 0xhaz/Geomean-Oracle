@@ -34,8 +34,11 @@ contract GeoMeanOracle is BaseHook {
     /// @member cardinality The cardinality of the observations array for the pool
     /// @member cardinalityNext The cardinality target of the observations array for the pool, which will replace cardinality when enough observations have been written
     struct ObservationState {
+        // This indicates the last written observation for the pool
         uint16 index;
+        // this represents the current size of the observations array
         uint16 cardinality;
+        // this represents the target size of the observations array
         uint16 cardinalityNext;
     }
 
